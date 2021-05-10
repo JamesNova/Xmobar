@@ -17,9 +17,10 @@ Config { font = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:hinting=true
                         , Run Memory ["-t", "<fn=1>\xf233</fn> Mem <used>M (<usedratio>%)"] 20
                         , Run DiskU [("/", "<fn=1>\xf0c7</fn> Hdd <free> free")] [] 60
                         , Run Com "uname" ["-r"] "" 3600
+                        , Run Com "/home/tiago/Documents/dotfiles/.config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 20
                         , Run UnsafeStdinReader
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = " <icon=haskell_20.xpm/>   <fc=#666666>|</fc> %UnsafeStdinReader% }{  <fc=#666666>|</fc>  <fc=#b3afc2><fn=1>\xf17c</fn>  <action=`alacritty -e htop`>%uname%</action> </fc> <fc=#666666>|</fc>  <fc=#ecbe7b> <action=`alacritty -e htop`>%cpu%</action> </fc> <fc=#666666>|</fc>  <fc=#ff6c6b> <action=`alacritty -e htop`>%memory%</action> </fc> <fc=#666666>|</fc>  <fc=#51afef> <action=`alacritty -e htop`>%disku%</action> </fc> <fc=#666666>|</fc>  <fc=#98be65> <action=`alacritty -e sudo iftop`>%enp0s8%</action> </fc> <fc=#666666>|</fc>  <fc=#46d9ff> %date% </fc>          "
+        , template = " <icon=haskell_20.xpm/>   <fc=#666666>|</fc> %UnsafeStdinReader% }{  <fc=#666666>|</fc>  <fc=#b3afc2><fn=1>\xf17c</fn>  <action=`alacritty -e htop`>%uname%</action> </fc> <fc=#666666>|</fc>  <fc=#ecbe7b> <action=`alacritty -e htop`>%cpu%</action> </fc> <fc=#666666>|</fc>  <fc=#ff6c6b> <action=`alacritty -e htop`>%memory%</action> </fc> <fc=#666666>|</fc>  <fc=#51afef> <action=`alacritty -e htop`>%disku%</action> </fc> <fc=#666666>|</fc>  <fc=#98be65> <action=`alacritty -e sudo iftop`>%enp0s8%</action> </fc> <fc=#666666>|</fc>  <fc=#46d9ff> %date% </fc><fc=#666666>|</fc> %trayerpad% "
         }
